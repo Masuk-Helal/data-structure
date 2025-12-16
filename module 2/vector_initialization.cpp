@@ -18,7 +18,7 @@ int main()
       cout << v2[i] << " ";
    }
 
-   int a[5] = {1, 2, 4, 5, 6};
+   int a[5] = {1, 2, 4, 5, 7};
    vector<int> v(a, a + 5); // vector dicler type 5
    for (int i = 0; i < v.size(); i++)
    {
