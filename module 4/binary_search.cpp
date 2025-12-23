@@ -1,51 +1,25 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+class Node
+{
+public:
+   int val;
+   Node* next;
+   Node(int newval){
+      this->val = newval;
+      this->next = NULL;
+   }
+};
+
 int main()
 {
+   Node a(10),b(2065),c(30);
+   // a.val = 10;
+   // b.val = 20;
+   // c.val = 30;
 
-   int n;
-   cin >> n;
-
-   int a[n];
-
-   for (int i = 0; i < n; i++)
-   {
-      cin >> a[i];
-   }
-
-   int val;
-   cin >> val;
-   int flag = 0;
-
-   int l = 0;
-   int r = n - 1;
-
-   while (l <= r)
-   {
-      int mid = (l + r) / 2;
-      if (a[mid] == val)
-      {
-         flag = 1;
-         break;
-      }
-      else if (a[mid] > val)
-      {
-         r = mid - 1;
-      }
-      else
-      {
-         l = mid + 1;
-      }
-   }
-
-   if (flag == 1)
-   {
-      cout << "found" << endl;
-   }
-   else
-   {
-      cout << "not found" << endl;
-   }
-
+   a.next = &b;
+   cout << a.next->val << endl;
    return 0;
 }
