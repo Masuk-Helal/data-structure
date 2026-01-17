@@ -26,13 +26,15 @@ void print_forowad(Node *head)
    cout << endl;
 }
 
-void inset_at_head(Node *&head, int val)
+void print_backowad(Node *tail)
 {
-   Node* newnode = new Node(val);
-   newnode->next = head;
-   head->prev = newnode;
-   head = newnode;
-  
+   Node *tmp = tail;
+   while (tmp != NULL)
+   {
+      cout << tmp->val << " ";
+      tmp = tmp->prev;
+   }
+   cout << endl;
 }
 
 int main()
@@ -47,7 +49,7 @@ int main()
    a->next = tail;
    tail->prev = a;
 
-   inset_at_head(head, 40);
    print_forowad(head);
+   print_backowad(tail);
    return 0;
 }
